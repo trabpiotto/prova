@@ -18,9 +18,10 @@ namespace Prova
             Application.SetCompatibleTextRenderingDefault(false);
             //coommmentortnridntgsdofngjkcngjxfhzvjmxgmhgvdmjxcvbzxjc
             ///sdfgsdfgmskldfngsm,bgjksb,bgmsxcbv
-            /////sdfg
+            
 	    ///Pedro
 		//Leo
+//dif
             Application.Run(new Form1());
         }
     }
