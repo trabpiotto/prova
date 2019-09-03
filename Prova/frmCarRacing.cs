@@ -12,6 +12,7 @@ namespace Prova
 {
     public partial class frmCarRacing : Form
     {
+        int gamespeed = 0;
         public frmCarRacing()
         {
             InitializeComponent();
@@ -66,12 +67,40 @@ namespace Prova
         {
             if (e.KeyCode == Keys.A)
             {
-                car.Left += -10;
+                if(gamespeed != 0)
+                {
+                    if (car.Left > 20)
+                    {
+                        car.Left += -10;
+                    }
+                }
             }
 
             if (e.KeyCode == Keys.D)
             {
-                car.Left += 10;
+                if (gamespeed != 0)
+                {
+                    if (car.Right < 370)
+                    {
+                        car.Left += 10;
+                    }
+                }
+            }
+
+            if(e.KeyCode == Keys.Up)
+            {
+                if(gamespeed < 21)
+                {
+                    gamespeed++;
+                }
+            }
+
+            if (e.KeyCode == Keys.Down)
+            {
+                if (gamespeed > 5)
+                {
+                    gamespeed--;
+                }
             }
         }
     }

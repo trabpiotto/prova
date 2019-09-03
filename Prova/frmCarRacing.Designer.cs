@@ -38,6 +38,9 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.car = new System.Windows.Forms.PictureBox();
+            this.enimy1 = new System.Windows.Forms.PictureBox();
+            this.enimy2 = new System.Windows.Forms.PictureBox();
+            this.enimy3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -45,14 +48,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.car)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enimy1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enimy2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enimy3)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Location = new System.Drawing.Point(188, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(188, -4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(10, 80);
+            this.pictureBox1.Size = new System.Drawing.Size(10, 90);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -61,25 +67,25 @@
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Location = new System.Drawing.Point(188, 121);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(10, 76);
+            this.pictureBox2.Size = new System.Drawing.Size(10, 85);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Location = new System.Drawing.Point(188, 257);
+            this.pictureBox3.Location = new System.Drawing.Point(188, 252);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(10, 82);
+            this.pictureBox3.Size = new System.Drawing.Size(10, 81);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Location = new System.Drawing.Point(188, 380);
+            this.pictureBox4.Location = new System.Drawing.Point(188, 384);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(10, 73);
+            this.pictureBox4.Size = new System.Drawing.Size(10, 92);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
@@ -117,12 +123,45 @@
             this.car.TabIndex = 6;
             this.car.TabStop = false;
             // 
+            // enimy1
+            // 
+            this.enimy1.Image = ((System.Drawing.Image)(resources.GetObject("enimy1.Image")));
+            this.enimy1.Location = new System.Drawing.Point(73, 121);
+            this.enimy1.Name = "enimy1";
+            this.enimy1.Size = new System.Drawing.Size(27, 55);
+            this.enimy1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enimy1.TabIndex = 7;
+            this.enimy1.TabStop = false;
+            // 
+            // enimy2
+            // 
+            this.enimy2.Image = ((System.Drawing.Image)(resources.GetObject("enimy2.Image")));
+            this.enimy2.Location = new System.Drawing.Point(229, 61);
+            this.enimy2.Name = "enimy2";
+            this.enimy2.Size = new System.Drawing.Size(27, 55);
+            this.enimy2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enimy2.TabIndex = 8;
+            this.enimy2.TabStop = false;
+            // 
+            // enimy3
+            // 
+            this.enimy3.Image = ((System.Drawing.Image)(resources.GetObject("enimy3.Image")));
+            this.enimy3.Location = new System.Drawing.Point(315, 193);
+            this.enimy3.Name = "enimy3";
+            this.enimy3.Size = new System.Drawing.Size(27, 55);
+            this.enimy3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.enimy3.TabIndex = 9;
+            this.enimy3.TabStop = false;
+            // 
             // frmCarRacing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(384, 461);
+            this.Controls.Add(this.enimy3);
+            this.Controls.Add(this.enimy2);
+            this.Controls.Add(this.enimy1);
             this.Controls.Add(this.car);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -142,6 +181,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.car)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enimy1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enimy2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.enimy3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -156,6 +198,9 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox car;
+        private System.Windows.Forms.PictureBox enimy1;
+        private System.Windows.Forms.PictureBox enimy2;
+        private System.Windows.Forms.PictureBox enimy3;
     }
 }
 
