@@ -755,7 +755,7 @@
         /1Sg0P8DZrmptCZuOrgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="enimy1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="enemy1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADwAAABgCAYAAABBsBH+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IwAALiMBeKU/dgAAJ5RJREFUeF7NfAl0VFW67lnWXbVWvVd9a9WtW69W1ataNdyqypyYGEFmIkEGGRLC
@@ -930,7 +930,7 @@
         bBpp2v8HZuso+dln184AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="enimy2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="enemy2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADwAAABgCAYAAABBsBH+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IwAALiMBeKU/dgAAJ5RJREFUeF7NfAl0VFW67lnWXbVWvVd9a9WtW69W1ataNdyqypyYGEFmIkEGGRLC
@@ -1105,7 +1105,7 @@
         bBpp2v8HZuso+dln184AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="enimy3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="enemy3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADwAAABgCAYAAABBsBH+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
         IwAALiMBeKU/dgAAJ5RJREFUeF7NfAl0VFW67lnWXbVWvVd9a9WtW69W1ataNdyqypyYGEFmIkEGGRLC

@@ -13,6 +13,7 @@ namespace Prova
     public partial class frmCarRacing : Form
     {
         int gamespeed = 0;
+
         public frmCarRacing()
         {
             InitializeComponent();
@@ -21,12 +22,49 @@ namespace Prova
         private void Timer1_Tick(object sender, EventArgs e)
         {
             moveLine(5);
+            enemy(2);
         }
 
+        void enemy(int speed)
+        {
+            Random rnd = new Random();
+            int rand = rnd.Next(3, 7);
+            int rand2 = rnd.Next(15, 360);
+
+            if (enemy1.Top >= 500)
+            {
+                enemy1.Top = 0;
+                enemy1.Left = rand2;
+            }
+            else
+            {
+                enemy1.Top += rand + 2;
+            }
+
+            if (enemy2.Top >= 500)
+            {
+                enemy2.Top = 0;
+                enemy2.Left = rand2;
+            }
+            else
+            {
+                enemy2.Top += rand;
+            }
+
+            if (enemy3.Top >= 500)
+            {
+                enemy3.Top = 0;
+                enemy3.Left = rand2;
+            }
+            else
+            {
+                enemy3.Top += rand + 1;
+            }
+        }
 
         void moveLine(int speed)
         {
-            if(pictureBox1.Top >= 500)
+            if (pictureBox1.Top >= 500)
             {
                 pictureBox1.Top = 0;
             }
@@ -67,27 +105,24 @@ namespace Prova
         {
             if (e.KeyCode == Keys.A)
             {
-                if(gamespeed != 0)
+
+                if (car.Left > 20)
                 {
-                    if (car.Left > 20)
-                    {
-                        car.Left += -10;
-                    }
+                    car.Left += -10;
                 }
+
             }
 
             if (e.KeyCode == Keys.D)
             {
-                if (gamespeed != 0)
+                if (car.Right < 370)
                 {
-                    if (car.Right < 370)
-                    {
-                        car.Left += 10;
-                    }
+                    car.Left += 10;
                 }
+
             }
 
-            if(e.KeyCode == Keys.Up)
+            /*if(e.KeyCode == Keys.Up)
             {
                 if(gamespeed < 21)
                 {
@@ -101,7 +136,7 @@ namespace Prova
                 {
                     gamespeed--;
                 }
-            }
+            }*/
         }
     }
 }
