@@ -1,0 +1,10 @@
+C:\PROJETOS\NET\thread\thread\bin\Debug\thread.exe.config
+C:\PROJETOS\NET\thread\thread\bin\Debug\thread.exe
+C:\PROJETOS\NET\thread\thread\bin\Debug\thread.pdb
+C:\PROJETOS\NET\thread\thread\obj\Debug\thread.csprojAssemblyReference.cache
+C:\PROJETOS\NET\thread\thread\obj\Debug\thread.Form1.resources
+C:\PROJETOS\NET\thread\thread\obj\Debug\thread.Properties.Resources.resources
+C:\PROJETOS\NET\thread\thread\obj\Debug\thread.csproj.GenerateResource.cache
+C:\PROJETOS\NET\thread\thread\obj\Debug\thread.csproj.CoreCompileInputs.cache
+C:\PROJETOS\NET\thread\thread\obj\Debug\thread.exe
+C:\PROJETOS\NET\thread\thread\obj\Debug\thread.pdb
