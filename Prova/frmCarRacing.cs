@@ -12,56 +12,121 @@ namespace Prova
 {
     public partial class frmCarRacing : Form
     {
-        int gamespeed = 0;
-
+        static int vel = 5;
+        int gamespeed = vel;
+        int scoreCollected = 0;        
+        bool pause = true;
         public frmCarRacing()
         {
             InitializeComponent();
+            gameOver.Visible = false;
+            lblPause.Visible = true;
+            btnReiniciar.Visible = false;
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            moveLine(5);
+            moveLine(gamespeed);
+            score(gamespeed);
             enemy(2);
+            fimJogo();
+            pausar(pause);
+            //scoreGame();
         }
 
+        void pausar(bool pause)
+        {
+            this.pause = pause;
+
+            if (pause == true)
+            {
+                gamespeed = 0;
+                lblPause.Visible = true;
+            }
+            else
+            {
+                gamespeed = vel;
+                lblPause.Visible = false;
+            }
+        }
         void enemy(int speed)
         {
             Random rnd = new Random();
             int rand = rnd.Next(3, 7);
-            int rand2 = rnd.Next(15, 360);
+            int rand2 = rnd.Next(25, 350);
 
-            if (enemy1.Top >= 500)
+            if (gamespeed != 0)
             {
-                enemy1.Top = 0;
-                enemy1.Left = rand2;
-            }
-            else
-            {
-                enemy1.Top += rand + 2;
-            }
+                if (enemy1.Top >= 500)
+                {
+                    enemy1.Top = 0;
+                    enemy1.Left = rand2;
+                }
+                else
+                {
+                    enemy1.Top += rand + 2;
+                }
 
-            if (enemy2.Top >= 500)
-            {
-                enemy2.Top = 0;
-                enemy2.Left = rand2;
-            }
-            else
-            {
-                enemy2.Top += rand;
-            }
+                if (enemy2.Top >= 500)
+                {
+                    enemy2.Top = 0;
+                    enemy2.Left = rand2;
+                }
+                else
+                {
+                    enemy2.Top += rand;
+                }
 
-            if (enemy3.Top >= 500)
-            {
-                enemy3.Top = 0;
-                enemy3.Left = rand2;
-            }
-            else
-            {
-                enemy3.Top += rand + 1;
+                if (enemy3.Top >= 500)
+                {
+                    enemy3.Top = 0;
+                    enemy3.Left = rand2;
+                }
+                else
+                {
+                    enemy3.Top += rand + 1;
+                }
             }
         }
 
+        void score(int speed)
+        {
+            if (point1.Top >= 500)
+            {
+                point1.Top = 0;
+
+                scoreCollected++;
+                lblScore.Text = "Score: " + scoreCollected.ToString();
+            }
+            else
+            {
+                point1.Top += speed;
+            }
+
+            if (point2.Top >= 500)
+            {
+                point2.Top = 0;
+
+                scoreCollected++;
+                lblScore.Text = "Score: " + scoreCollected.ToString();
+            }
+            else
+            {
+                point2.Top += speed;
+            }
+        }
+
+        bool fimJogo()
+        {
+            if (car.Bounds.IntersectsWith(enemy1.Bounds) || car.Bounds.IntersectsWith(enemy2.Bounds) || car.Bounds.IntersectsWith(enemy3.Bounds))
+            {
+                timer1.Enabled = false;
+                gameOver.Visible = true;
+                btnReiniciar.Visible = true;
+                return true;
+            }        
+            return false;
+        }
         void moveLine(int speed)
         {
             if (pictureBox1.Top >= 500)
@@ -103,40 +168,44 @@ namespace Prova
 
         private void FrmCarRacing_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.A)
+            if (fimJogo())
+            {
+                gamespeed = 0;
+            }
+
+            if (e.KeyCode == Keys.A && gamespeed != 0)
             {
 
                 if (car.Left > 20)
                 {
                     car.Left += -10;
                 }
-
             }
-
-            if (e.KeyCode == Keys.D)
+            
+            if (e.KeyCode == Keys.D && gamespeed != 0)
             {
                 if (car.Right < 370)
                 {
                     car.Left += 10;
                 }
-
             }
 
-            /*if(e.KeyCode == Keys.Up)
+            if (e.KeyCode == Keys.Space)
             {
-                if(gamespeed < 21)
+                if(pause == true)
                 {
-                    gamespeed++;
+                    pause = false;
+                }
+                else
+                {
+                    pause = true;
                 }
             }
+        }
 
-            if (e.KeyCode == Keys.Down)
-            {
-                if (gamespeed > 5)
-                {
-                    gamespeed--;
-                }
-            }*/
+        private void BtnReiniciar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

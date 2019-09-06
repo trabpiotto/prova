@@ -41,6 +41,12 @@
             this.enemy1 = new System.Windows.Forms.PictureBox();
             this.enemy2 = new System.Windows.Forms.PictureBox();
             this.enemy3 = new System.Windows.Forms.PictureBox();
+            this.gameOver = new System.Windows.Forms.Label();
+            this.point1 = new System.Windows.Forms.PictureBox();
+            this.point2 = new System.Windows.Forms.PictureBox();
+            this.lblScore = new System.Windows.Forms.Label();
+            this.lblPause = new System.Windows.Forms.Label();
+            this.btnReiniciar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -51,6 +57,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.point1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.point2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -116,7 +124,7 @@
             // car
             // 
             this.car.Image = ((System.Drawing.Image)(resources.GetObject("car.Image")));
-            this.car.Location = new System.Drawing.Point(73, 356);
+            this.car.Location = new System.Drawing.Point(114, 372);
             this.car.Name = "car";
             this.car.Size = new System.Drawing.Size(27, 55);
             this.car.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,26 +161,104 @@
             this.enemy3.TabIndex = 9;
             this.enemy3.TabStop = false;
             // 
+            // gameOver
+            // 
+            this.gameOver.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gameOver.AutoSize = true;
+            this.gameOver.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gameOver.Location = new System.Drawing.Point(107, 209);
+            this.gameOver.Name = "gameOver";
+            this.gameOver.Size = new System.Drawing.Size(167, 34);
+            this.gameOver.TabIndex = 10;
+            this.gameOver.Text = "VOCÊ PERDEU";
+            this.gameOver.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.gameOver.Click += new System.EventHandler(this.BtnReiniciar_Click);
+            // 
+            // point1
+            // 
+            this.point1.BackColor = System.Drawing.Color.Transparent;
+            this.point1.Location = new System.Drawing.Point(8, 166);
+            this.point1.Name = "point1";
+            this.point1.Size = new System.Drawing.Size(364, 10);
+            this.point1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.point1.TabIndex = 11;
+            this.point1.TabStop = false;
+            // 
+            // point2
+            // 
+            this.point2.BackColor = System.Drawing.Color.Transparent;
+            this.point2.Location = new System.Drawing.Point(8, 433);
+            this.point2.Name = "point2";
+            this.point2.Size = new System.Drawing.Size(364, 10);
+            this.point2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.point2.TabIndex = 12;
+            this.point2.TabStop = false;
+            // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblScore.Location = new System.Drawing.Point(16, 9);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(59, 19);
+            this.lblScore.TabIndex = 13;
+            this.lblScore.Text = "Score: 0";
+            // 
+            // lblPause
+            // 
+            this.lblPause.AutoSize = true;
+            this.lblPause.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPause.Location = new System.Drawing.Point(133, 295);
+            this.lblPause.Name = "lblPause";
+            this.lblPause.Size = new System.Drawing.Size(114, 19);
+            this.lblPause.TabIndex = 14;
+            this.lblPause.Text = "Pressione Space";
+            this.lblPause.Click += new System.EventHandler(this.BtnReiniciar_Click);
+            // 
+            // btnReiniciar
+            // 
+            this.btnReiniciar.BackColor = System.Drawing.Color.Orange;
+            this.btnReiniciar.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReiniciar.Location = new System.Drawing.Point(114, 252);
+            this.btnReiniciar.Name = "btnReiniciar";
+            this.btnReiniciar.Size = new System.Drawing.Size(152, 40);
+            this.btnReiniciar.TabIndex = 15;
+            this.btnReiniciar.Text = "Voltar ao Menu";
+            this.btnReiniciar.UseVisualStyleBackColor = false;
+            this.btnReiniciar.Click += new System.EventHandler(this.BtnReiniciar_Click);
+            // 
             // frmCarRacing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(384, 461);
+            this.Controls.Add(this.btnReiniciar);
+            this.Controls.Add(this.lblPause);
+            this.Controls.Add(this.lblScore);
+            this.Controls.Add(this.car);
+            this.Controls.Add(this.gameOver);
             this.Controls.Add(this.enemy3);
             this.Controls.Add(this.enemy2);
             this.Controls.Add(this.enemy1);
-            this.Controls.Add(this.car);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.point1);
+            this.Controls.Add(this.point2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCarRacing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Corrida de Carro";
+            this.Click += new System.EventHandler(this.BtnReiniciar_Click);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCarRacing_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -184,7 +270,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.point1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.point2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -201,6 +290,12 @@
         private System.Windows.Forms.PictureBox enemy1;
         private System.Windows.Forms.PictureBox enemy2;
         private System.Windows.Forms.PictureBox enemy3;
+        private System.Windows.Forms.Label gameOver;
+        private System.Windows.Forms.PictureBox point1;
+        private System.Windows.Forms.PictureBox point2;
+        private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label lblPause;
+        private System.Windows.Forms.Button btnReiniciar;
     }
 }
 
