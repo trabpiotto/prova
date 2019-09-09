@@ -12,15 +12,15 @@ namespace Prova
 {
     public partial class frmMenuPrincipal : Form
     {
-        public int game = 0;
+        public static int game = 0;
         public frmMenuPrincipal()
         {
             InitializeComponent();
         }
 
-        public void recuperaGame()
+        public int recuperaGame()
         {
-            if(btnCarRacing.Click == )
+            return game;
         }
 
         private void BtnCarRacing_Click(object sender, EventArgs e)
@@ -34,11 +34,15 @@ namespace Prova
         private void BtnPingPong_Click(object sender, EventArgs e)
         {
             game = 2;
+            frmNickname nick = new frmNickname();
+            nick.ShowDialog();
         }
 
         private void BtnFuga_Click(object sender, EventArgs e)
         {
             game = 1;
+            frmNickname nick = new frmNickname();
+            nick.ShowDialog();
         }
     }
 }

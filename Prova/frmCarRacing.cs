@@ -15,7 +15,10 @@ namespace Prova
         static int vel = 5;
         int gamespeed = vel;
         int scoreCollected = 0;        
-        bool pause = true;
+        bool pause = true;     
+        
+
+
         public frmCarRacing()
         {
             InitializeComponent();
@@ -31,7 +34,15 @@ namespace Prova
             enemy(2);
             fimJogo();
             pausar(pause);
-            //scoreGame();
+            nick();            
+        }
+
+        //Leonardo
+        void bancoDados() {
+            frmMenuPrincipal menu = new frmMenuPrincipal();
+            frmNickname nick = new frmNickname();
+
+
         }
 
         void pausar(bool pause)
@@ -87,6 +98,11 @@ namespace Prova
                     enemy3.Top += rand + 1;
                 }
             }
+        }
+
+        void nick() {
+            frmNickname nick = new frmNickname();
+            lblNick.Text = "Nick: " + nick.recuperaNick().ToString();
         }
 
         void score(int speed)

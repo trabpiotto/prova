@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNick = new System.Windows.Forms.TextBox();
             this.btnComecar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -44,13 +44,13 @@
             this.label2.Text = "Entre com seu Nickname";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // txtNick
             // 
-            this.textBox1.Location = new System.Drawing.Point(46, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNick.Location = new System.Drawing.Point(46, 31);
+            this.txtNick.Name = "txtNick";
+            this.txtNick.Size = new System.Drawing.Size(305, 20);
+            this.txtNick.TabIndex = 2;
+            this.txtNick.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnComecar
             // 
@@ -68,7 +68,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 101);
             this.Controls.Add(this.btnComecar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNick);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmNickname";
@@ -82,7 +82,7 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNick;
         private System.Windows.Forms.Button btnComecar;
     }
 }

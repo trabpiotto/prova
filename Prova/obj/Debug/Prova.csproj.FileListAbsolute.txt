@@ -10,3 +10,15 @@ C:\DEV\Visual Studio 2019\Prova\Prova\obj\Debug\Prova.pdb
 C:\DEV\Visual Studio 2019\Prova\Prova\obj\Debug\Prova.frmCarRacing.resources
 C:\DEV\Visual Studio 2019\Prova\Prova\obj\Debug\Prova.frmMenuPrincipal.resources
 C:\DEV\Visual Studio 2019\Prova\Prova\obj\Debug\Prova.frmNickname.resources
+D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\obj\Debug\Prova.csprojAssemblyReference.cache
+D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\obj\Debug\Prova.frmNickname.resources
+D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\obj\Debug\Prova.frmCarRacing.resources
+D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\obj\Debug\Prova.frmMenuPrincipal.resources
+D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\obj\Debug\Prova.Properties.Resources.resources
+D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\obj\Debug\Prova.csproj.GenerateResource.cache
+D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\obj\Debug\Prova.csproj.CoreCompileInputs.cache
+D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\obj\Debug\Prova.exe
+D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\obj\Debug\Prova.pdb
+D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\bin\Debug\Prova.exe.config
+D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\bin\Debug\Prova.exe
+D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\bin\Debug\Prova.pdb

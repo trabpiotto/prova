@@ -47,6 +47,7 @@
             this.lblScore = new System.Windows.Forms.Label();
             this.lblPause = new System.Windows.Forms.Label();
             this.btnReiniciar = new System.Windows.Forms.Button();
+            this.lblNick = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -230,12 +231,22 @@
             this.btnReiniciar.UseVisualStyleBackColor = false;
             this.btnReiniciar.Click += new System.EventHandler(this.BtnReiniciar_Click);
             // 
+            // lblNick
+            // 
+            this.lblNick.AutoSize = true;
+            this.lblNick.Location = new System.Drawing.Point(17, 28);
+            this.lblNick.Name = "lblNick";
+            this.lblNick.Size = new System.Drawing.Size(35, 13);
+            this.lblNick.TabIndex = 16;
+            this.lblNick.Text = "Nick: ";
+            // 
             // frmCarRacing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(384, 461);
+            this.Controls.Add(this.lblNick);
             this.Controls.Add(this.btnReiniciar);
             this.Controls.Add(this.lblPause);
             this.Controls.Add(this.lblScore);
@@ -296,6 +307,7 @@
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblPause;
         private System.Windows.Forms.Button btnReiniciar;
+        private System.Windows.Forms.Label lblNick;
     }
 }
 

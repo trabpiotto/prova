@@ -12,25 +12,35 @@ namespace Prova
 {
     public partial class frmNickname : Form
     {
+        public static string nick;
         public frmNickname()
         {
             InitializeComponent();
         }
 
-        frmMenuPrincipal menu = new frmMenuPrincipal();
+        
+
+        public string recuperaNick() {
+            return nick;
+        }
 
         private void BtnComecar_Click(object sender, EventArgs e)
         {
+            frmMenuPrincipal menu = new frmMenuPrincipal();
             frmCarRacing carGame = new frmCarRacing();
+            
+            nick = txtNick.Text;
 
-            MessageBox.Show("Game: " + menu.game);
+            if (menu.recuperaGame() == 3) {
+                carGame.ShowDialog();
+            }
+            if (menu.recuperaGame() == 2) {
 
-            /*
-             * frmPingPong ping = new frmPingPong();
-             * frmFuja fuja = new frmFuja();
-             */
+            }
+            if (menu.recuperaGame() == 1) {
 
-            //Colocar condigão para abrir o jogo que foi selecionado passando o nickname como parametro
+            }
+            this.Close();
         }
     }
 }
