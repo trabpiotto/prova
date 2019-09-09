@@ -9,3 +9,4 @@ C:\DEV\Visual Studio 2019\Prova\Prova\obj\Debug\Prova.exe
 C:\DEV\Visual Studio 2019\Prova\Prova\obj\Debug\Prova.pdb
 C:\DEV\Visual Studio 2019\Prova\Prova\obj\Debug\Prova.frmCarRacing.resources
 C:\DEV\Visual Studio 2019\Prova\Prova\obj\Debug\Prova.frmMenuPrincipal.resources
+C:\DEV\Visual Studio 2019\Prova\Prova\obj\Debug\Prova.frmNickname.resources

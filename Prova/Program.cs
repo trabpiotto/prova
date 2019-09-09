@@ -22,7 +22,7 @@ namespace Prova
 	    ///Pedro
 		//Leo
 //dif
-            Application.Run(new frmCarRacing());
+            Application.Run(new frmMenuPrincipal());
         }
     }
 }
