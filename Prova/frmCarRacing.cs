@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,11 +38,59 @@ namespace Prova
             nick();            
         }
 
-        //Leonardo
         void bancoDados() {
             frmMenuPrincipal menu = new frmMenuPrincipal();
             frmNickname nick = new frmNickname();
 
+            Conexao c = new Conexao();
+
+            int jogo = menu.recuperaGame();
+            string nomeJogador = nick.recuperaNick();
+
+            MySqlCommand cmd = new MySqlCommand("select * from jogador_car where nome_jogador = @nomeJogador");
+            cmd.Parameters.Add(new MySqlParameter("@nomeJogador", nomeJogador));
+
+            c.Abrir();
+            MySqlDataReader reader = c.Pesquisar(cmd);
+            
+
+            if (reader.HasRows)
+            {
+                c.Fechar();
+
+                MySqlCommand cmd4 = new MySqlCommand("select * from jogador_car where nome_jogador = @nomeJogador");
+                cmd4.Parameters.Add(new MySqlParameter("@nomeJogador", nomeJogador));
+                c.Abrir();
+                MySqlDataReader r = c.Pesquisar(cmd4);
+
+                r.Read();
+                int scoreSalvo = r.GetInt32(2);
+
+                if(scoreSalvo < scoreCollected)
+                {
+                    c.Fechar();
+                    MySqlCommand cmd2 = new MySqlCommand("update jogador_car set score_jogador = @score where nome_jogador = @nomeJogador");
+                    cmd2.Parameters.Add(new MySqlParameter("@score", scoreCollected));
+                    cmd2.Parameters.Add(new MySqlParameter("@nomeJogador", nomeJogador));
+
+                    c.Abrir();
+                    c.Executar(cmd2);
+                    c.Fechar();
+                }
+
+                c.Fechar();
+            }
+            else
+            {
+                c.Fechar();
+                MySqlCommand cmd3 = new MySqlCommand("insert into jogador_car (nome_jogador, score_jogador) values (@nomeJogador, @score)");
+                cmd3.Parameters.Add(new MySqlParameter("@nomeJogador", nomeJogador));
+                cmd3.Parameters.Add(new MySqlParameter("@score", scoreCollected));
+
+                c.Abrir();
+                c.Executar(cmd3);
+                c.Fechar();
+            }
 
         }
 
@@ -139,6 +188,7 @@ namespace Prova
                 timer1.Enabled = false;
                 gameOver.Visible = true;
                 btnReiniciar.Visible = true;
+                bancoDados();
                 return true;
             }        
             return false;

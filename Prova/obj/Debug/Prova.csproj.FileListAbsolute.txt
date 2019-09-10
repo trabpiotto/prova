@@ -22,3 +22,9 @@ D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\obj\Debug\Prova.pdb
 D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\bin\Debug\Prova.exe.config
 D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\bin\Debug\Prova.exe
 D:\DEV\Projects\Visual Studio 2019 Projects\Provaa\Prova\bin\Debug\Prova.pdb
+C:\DEV\Visual Studio 2019\Prova\Prova\bin\Debug\MySql.Data.dll
+C:\DEV\Visual Studio 2019\Prova\Prova\bin\Debug\Google.Protobuf.dll
+C:\DEV\Visual Studio 2019\Prova\Prova\bin\Debug\Renci.SshNet.dll
+C:\DEV\Visual Studio 2019\Prova\Prova\bin\Debug\BouncyCastle.Crypto.dll
+C:\DEV\Visual Studio 2019\Prova\Prova\bin\Debug\MySql.Data.xml
+C:\DEV\Visual Studio 2019\Prova\Prova\obj\Debug\Prova.csproj.CopyComplete
