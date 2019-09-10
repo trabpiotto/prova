@@ -88,6 +88,7 @@
             this.btnPlacar.TabIndex = 3;
             this.btnPlacar.Text = "Ver Placar de Scores";
             this.btnPlacar.UseVisualStyleBackColor = false;
+            this.btnPlacar.Click += new System.EventHandler(this.BtnPlacar_Click);
             // 
             // frmMenuPrincipal
             // 

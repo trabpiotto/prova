@@ -44,5 +44,11 @@ namespace Prova
             frmNickname nick = new frmNickname();
             nick.ShowDialog();
         }
+
+        private void BtnPlacar_Click(object sender, EventArgs e)
+        {
+            frmScore fScore = new frmScore();
+            fScore.ShowDialog();
+        }
     }
 }
