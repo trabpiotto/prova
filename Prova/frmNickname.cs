@@ -28,6 +28,7 @@ namespace Prova
         {
             frmMenuPrincipal menu = new frmMenuPrincipal();
             frmCarRacing carGame = new frmCarRacing();
+            frmPong pong = new frmPong();
             
             nick = txtNick.Text;
 
@@ -35,7 +36,7 @@ namespace Prova
                 carGame.ShowDialog();
             }
             if (menu.recuperaGame() == 2) {
-
+                pong.ShowDialog();
             }
             if (menu.recuperaGame() == 1) {
 
