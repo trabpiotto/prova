@@ -34,7 +34,7 @@ namespace Prova
         private void BtnPingPong_Click(object sender, EventArgs e)
         {
             game = 2;
-            frmNickname nick = new frmNickname();
+            frmNicknamePong nick = new frmNicknamePong();
             nick.ShowDialog();
         }
 

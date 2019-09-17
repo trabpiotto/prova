@@ -30,19 +30,20 @@ namespace Prova
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.scoreLabel = new System.Windows.Forms.Label();
             this.lblPress = new System.Windows.Forms.Label();
             this.lblPause = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // scoreLabel
             // 
             this.scoreLabel.AutoSize = true;
             this.scoreLabel.Font = new System.Drawing.Font("Consolas", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreLabel.Location = new System.Drawing.Point(307, 224);
-            this.scoreLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.scoreLabel.Location = new System.Drawing.Point(230, 182);
             this.scoreLabel.Name = "scoreLabel";
-            this.scoreLabel.Size = new System.Drawing.Size(657, 140);
+            this.scoreLabel.Size = new System.Drawing.Size(518, 112);
             this.scoreLabel.TabIndex = 0;
             this.scoreLabel.Text = "Player 1 v Player 2\r\n       0 - 0";
             this.scoreLabel.Visible = false;
@@ -51,9 +52,10 @@ namespace Prova
             // 
             this.lblPress.AutoSize = true;
             this.lblPress.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPress.Location = new System.Drawing.Point(316, 172);
+            this.lblPress.Location = new System.Drawing.Point(237, 140);
+            this.lblPress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPress.Name = "lblPress";
-            this.lblPress.Size = new System.Drawing.Size(640, 51);
+            this.lblPress.Size = new System.Drawing.Size(515, 39);
             this.lblPress.TabIndex = 1;
             this.lblPress.Text = "Pressione espaço para começar";
             // 
@@ -61,22 +63,28 @@ namespace Prova
             // 
             this.lblPause.AutoSize = true;
             this.lblPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPause.Location = new System.Drawing.Point(316, 21);
+            this.lblPause.Location = new System.Drawing.Point(237, 17);
+            this.lblPause.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPause.Name = "lblPause";
-            this.lblPause.Size = new System.Drawing.Size(652, 51);
+            this.lblPause.Size = new System.Drawing.Size(523, 39);
             this.lblPause.TabIndex = 2;
             this.lblPause.Text = "Pressione espaço para continuar";
             // 
-            // jogoPong
+            // timer1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // frmPong
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1333, 677);
+            this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.lblPause);
             this.Controls.Add(this.lblPress);
             this.Controls.Add(this.scoreLabel);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPong";
@@ -95,5 +103,6 @@ namespace Prova
         private Label scoreLabel;
         private Label lblPress;
         private Label lblPause;
+        private Timer timer1;
     }
 }

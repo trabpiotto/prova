@@ -30,3 +30,4 @@ C:\DEV\Visual Studio 2019\Prova\Prova\bin\Debug\MySql.Data.xml
 C:\DEV\Visual Studio 2019\Prova\Prova\obj\Debug\Prova.csproj.CopyComplete
 C:\DEV\Visual Studio 2019\Prova\Prova\obj\Debug\Prova.frmScore.resources
 C:\DEV\Visual Studio 2019\Prova\Prova\obj\Debug\Prova.frmPong.resources
+C:\DEV\Visual Studio 2019\Prova\Prova\obj\Debug\Prova.frmNicknamePong.resources

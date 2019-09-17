@@ -16,12 +16,6 @@ namespace Prova
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //coommmentortnridntgsdofngjkcngjxfhzvjmxgmhgvdmjxcvbzxjc
-            ///sdfgsdfgmskldfngsm,bgjksb,bgmsxcbv
-            
-	    ///Pedro
-		//Leo
-//dif
             Application.Run(new frmMenuPrincipal());
         }
     }

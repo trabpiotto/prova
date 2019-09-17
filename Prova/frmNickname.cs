@@ -27,16 +27,14 @@ namespace Prova
         private void BtnComecar_Click(object sender, EventArgs e)
         {
             frmMenuPrincipal menu = new frmMenuPrincipal();
-            frmCarRacing carGame = new frmCarRacing();
-            frmPong pong = new frmPong();
+            
+            
             
             nick = txtNick.Text;
 
             if (menu.recuperaGame() == 3) {
+                frmCarRacing carGame = new frmCarRacing();
                 carGame.ShowDialog();
-            }
-            if (menu.recuperaGame() == 2) {
-                pong.ShowDialog();
             }
             if (menu.recuperaGame() == 1) {
 

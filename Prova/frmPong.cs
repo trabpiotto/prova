@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,10 +29,11 @@ namespace Prova
 
             aTimer.Elapsed += EventoBola; // Adiciona event handler
             //aTimer.Enabled = true; // starta o timer
+            fimJogo(); // Esse método precisa rodar no timer -Leo
         }
 
         private void EventoBola(Object source, System.Timers.ElapsedEventArgs e)
-        {
+        {            
             if (g.stopGame > 0)
             {
                 // comeca o jogo de novo
@@ -53,7 +55,28 @@ namespace Prova
             this.Invalidate();
         }
 
+        void bancoDados() // Metodo do banco de dados -Leo
+        {
+            frmMenuPrincipal menu = new frmMenuPrincipal();
+            frmNicknamePong nick = new frmNicknamePong();
 
+            Conexao c = new Conexao();
+
+            int jogo = menu.recuperaGame();
+            string nomeJogador1 = nick.recuperaNick1();
+            string nomeJogador2 = nick.recuperaNick2();
+
+
+            MySqlCommand cmd3 = new MySqlCommand("insert into jogador_pingpong (nome_jogador1, score_jogador1, nome_jogador2, score_jogador2) values (@nomeJogador1, @score1, @nomeJogador2, @score2)");
+            cmd3.Parameters.Add(new MySqlParameter("@nomeJogador1", nomeJogador1));
+            cmd3.Parameters.Add(new MySqlParameter("@score1", g.pontosP1));
+            cmd3.Parameters.Add(new MySqlParameter("@nomeJogador2", nomeJogador2));
+            cmd3.Parameters.Add(new MySqlParameter("@score2", g.pontosP2));
+
+            c.Abrir();
+            c.Executar(cmd3);
+            c.Fechar();
+        }
 
 
         private void pongForm_sobeBola(object sender, KeyEventArgs e)
@@ -64,6 +87,27 @@ namespace Prova
         private void pongForm_desceBola(object sender, KeyEventArgs e)
         {
             g.update_key(e, false);
+        }
+
+        public bool fimJogo() // Criei esse metodo bool para podermos parar o jogo quando alguem faze
+        {
+            if (g.pontosP1 >= 10)
+            {
+                bancoDados();
+                return true;
+            }else if(g.pontosP2 >= 10)
+            {
+                bancoDados();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+
+    
+
         }
 
         private void PongForm_Paint(object sender, PaintEventArgs e)//nomes e placar
@@ -90,6 +134,11 @@ namespace Prova
                 }
 
             }
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            fimJogo();
         }
     }
 
@@ -123,6 +172,8 @@ namespace Prova
                 new Rectangle(wall_offset, clientSize.Height - wall_offset, tamanhoBola.Width, tamanhoBola.Height),
                 clientSize);
         }
+
+
 
         public void update_pos()
         {
