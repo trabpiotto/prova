@@ -35,7 +35,7 @@ namespace Prova
             enemy(2);
             fimJogo();
             pausar(pause);
-            nick();            
+            nick();
         }
 
         void bancoDados() {

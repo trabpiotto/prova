@@ -17,6 +17,7 @@ namespace Prova
         {
             InitializeComponent();
             CarregarListaCar();
+            CarregarListaPong();
         }
 
         public void CarregarListaCar()
@@ -35,6 +36,30 @@ namespace Prova
                 dgvCar.Rows.Add(                   
                     reader.GetString(1),
                     reader.GetInt32(2)
+                    );
+            }
+            c.Fechar();
+
+        }
+
+        public void CarregarListaPong()
+        {
+
+            Conexao c = new Conexao();
+            c.Abrir();
+            MySqlCommand cmd = new MySqlCommand("select * from jogador_pingpong order by id_jogo desc");
+
+
+            MySqlDataReader reader = c.Pesquisar(cmd);
+
+            dgvPong.Rows.Clear();
+            while (reader.Read())
+            {
+                dgvPong.Rows.Add(
+                    reader.GetString(1),
+                    reader.GetInt32(2),
+                    reader.GetInt32(4),
+                    reader.GetString(3)                   
                     );
             }
             c.Fechar();
