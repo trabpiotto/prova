@@ -18,8 +18,6 @@
 --
 -- Table structure for table `jogador_bolinha`
 --
-create Database prova;
-use prova;
 
 DROP TABLE IF EXISTS `jogador_bolinha`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -50,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-30  9:35:50
+-- Dump completed on 2019-09-16 21:36:28

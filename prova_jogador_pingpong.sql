@@ -23,10 +23,12 @@ DROP TABLE IF EXISTS `jogador_pingpong`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `jogador_pingpong` (
-  `id_jogador` int(11) NOT NULL AUTO_INCREMENT,
-  `nome_jogador` varchar(45) NOT NULL,
-  `score_jogador` int(11) NOT NULL,
-  PRIMARY KEY (`id_jogador`)
+  `id_jogo` int(11) NOT NULL AUTO_INCREMENT,
+  `nome_vencedor` varchar(45) NOT NULL,
+  `score_vencedor` int(11) NOT NULL,
+  `nome_perdedor` varchar(45) NOT NULL,
+  `score_perdedor` int(11) NOT NULL,
+  PRIMARY KEY (`id_jogo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -48,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-30  9:35:49
+-- Dump completed on 2019-09-16 21:36:28

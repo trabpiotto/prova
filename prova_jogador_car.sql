@@ -27,7 +27,7 @@ CREATE TABLE `jogador_car` (
   `nome_jogador` varchar(45) NOT NULL,
   `score_jogador` int(11) NOT NULL,
   PRIMARY KEY (`id_jogador`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,6 +36,7 @@ CREATE TABLE `jogador_car` (
 
 LOCK TABLES `jogador_car` WRITE;
 /*!40000 ALTER TABLE `jogador_car` DISABLE KEYS */;
+INSERT INTO `jogador_car` VALUES (1,'LeoHenrique',54),(4,'Pedro',21),(5,'faria',17),(6,'DaniloCasi',44),(7,'kelvin',22);
 /*!40000 ALTER TABLE `jogador_car` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -48,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-30  9:35:49
+-- Dump completed on 2019-09-16 21:36:27
