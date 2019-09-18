@@ -19,6 +19,8 @@ namespace Prova
         public frmPong()
         {
             InitializeComponent();
+            btnVoltarMenu.Visible = false;
+            lblGameOver.Visible = false;
             g = new PongGame((Size)this.ClientSize);
 
             // Criando timer com intervalo de 2 seg.
@@ -33,7 +35,7 @@ namespace Prova
         }
 
         private void EventoBola(Object source, System.Timers.ElapsedEventArgs e)
-        {            
+        {
             if (g.stopGame > 0)
             {
                 // comeca o jogo de novo
@@ -78,6 +80,19 @@ namespace Prova
             c.Fechar();
         }
 
+        public void gameOver()
+        {
+            if (fimJogo())
+            {
+                btnVoltarMenu.Visible = true;
+                lblGameOver.Visible = true;
+                lblPause.Visible = false;
+                lblPress.Visible = false;
+                aTimer.Enabled = false;
+                timer1.Enabled = false;
+                bancoDados();
+            }
+        }
 
         private void pongForm_sobeBola(object sender, KeyEventArgs e)
         {
@@ -91,54 +106,59 @@ namespace Prova
 
         public bool fimJogo() // Criei esse metodo bool para podermos parar o jogo quando alguem faze
         {
-            if (g.pontosP1 >= 10)
+            if (g.pontosP1 == 5)
             {
-                bancoDados();
                 return true;
-            }else if(g.pontosP2 >= 10)
+            }
+            else if (g.pontosP2 == 5)
             {
-                bancoDados();
                 return true;
             }
             else
             {
                 return false;
             }
-            
-
-    
-
         }
 
         private void PongForm_Paint(object sender, PaintEventArgs e)//nomes e placar
         {
+            frmNicknamePong nick = new frmNicknamePong();
             g.paint(e);
-            scoreLabel.Text = String.Format("Player 1 v Player 2\r\n       {0} - {1} \r\n    aperte espaço", g.pontosP1, g.pontosP2);
+            scoreLabel.Text = nick.recuperaNick1().ToString() + " [" + g.pontosP1 + "]   vs   [" + g.pontosP2 + "] " + nick.recuperaNick2().ToString();
             scoreLabel.Visible = (g.stopGame > 0);
         }
 
         private void JogoPong_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == ' ')
+            if (!fimJogo())
             {
-                if (aTimer.Enabled == false)
+                if (e.KeyChar == ' ')
                 {
-                    aTimer.Enabled = true;
-                    lblPress.Visible = false;
-                    lblPause.Visible = false;
-                }
-                else
-                {
-                    aTimer.Enabled = false;
-                    lblPause.Visible = true;
-                }
+                    if (aTimer.Enabled == false)
+                    {
+                        aTimer.Enabled = true;
+                        lblPress.Visible = false;
+                        lblPause.Visible = false;
+                    }
+                    else
+                    {
+                        aTimer.Enabled = false;
+                        lblPause.Visible = true;
+                    }
 
+                }
             }
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
             fimJogo();
+            gameOver();
+        }
+
+        private void BtnVoltarMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

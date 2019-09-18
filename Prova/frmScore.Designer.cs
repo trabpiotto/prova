@@ -29,16 +29,21 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dgvCar = new System.Windows.Forms.DataGridView();
-            this.nomeJogador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.dgvPong = new System.Windows.Forms.DataGridView();
+            this.nomeJogador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.player1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pontos1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pontos2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,10 +109,27 @@
             this.dgvCar.AllowUserToResizeColumns = false;
             this.dgvCar.AllowUserToResizeRows = false;
             this.dgvCar.BackgroundColor = System.Drawing.Color.LightCoral;
+            this.dgvCar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomeJogador,
             this.score});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCar.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dgvCar.Location = new System.Drawing.Point(761, 92);
             this.dgvCar.MultiSelect = false;
@@ -116,29 +138,11 @@
             this.dgvCar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvCar.RowHeadersVisible = false;
             this.dgvCar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvCar.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCar.Size = new System.Drawing.Size(283, 346);
             this.dgvCar.TabIndex = 5;
-            // 
-            // nomeJogador
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.nomeJogador.DefaultCellStyle = dataGridViewCellStyle1;
-            this.nomeJogador.Frozen = true;
-            this.nomeJogador.HeaderText = "Nome Jogador";
-            this.nomeJogador.Name = "nomeJogador";
-            this.nomeJogador.ReadOnly = true;
-            this.nomeJogador.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.nomeJogador.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.nomeJogador.Width = 170;
-            // 
-            // score
-            // 
-            this.score.Frozen = true;
-            this.score.HeaderText = "Score";
-            this.score.Name = "score";
-            this.score.ReadOnly = true;
-            this.score.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.score.Width = 120;
             // 
             // dgvPong
             // 
@@ -161,8 +165,32 @@
             this.dgvPong.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvPong.RowHeadersVisible = false;
             this.dgvPong.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPong.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPong.Size = new System.Drawing.Size(396, 346);
             this.dgvPong.TabIndex = 6;
+            // 
+            // nomeJogador
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            this.nomeJogador.DefaultCellStyle = dataGridViewCellStyle2;
+            this.nomeJogador.Frozen = true;
+            this.nomeJogador.HeaderText = "Nome Jogador";
+            this.nomeJogador.Name = "nomeJogador";
+            this.nomeJogador.ReadOnly = true;
+            this.nomeJogador.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.nomeJogador.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.nomeJogador.Width = 170;
+            // 
+            // score
+            // 
+            this.score.Frozen = true;
+            this.score.HeaderText = "Score";
+            this.score.Name = "score";
+            this.score.ReadOnly = true;
+            this.score.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.score.Width = 120;
             // 
             // player1
             // 
@@ -173,6 +201,8 @@
             // 
             // pontos1
             // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.pontos1.DefaultCellStyle = dataGridViewCellStyle5;
             this.pontos1.Frozen = true;
             this.pontos1.HeaderText = "Pontos";
             this.pontos1.Name = "pontos1";
@@ -231,9 +261,9 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dgvCar;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.DataGridView dgvPong;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeJogador;
         private System.Windows.Forms.DataGridViewTextBoxColumn score;
-        private System.Windows.Forms.DataGridView dgvPong;
         private System.Windows.Forms.DataGridViewTextBoxColumn player1;
         private System.Windows.Forms.DataGridViewTextBoxColumn pontos1;
         private System.Windows.Forms.DataGridViewTextBoxColumn pontos2;
