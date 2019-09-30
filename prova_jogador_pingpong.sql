@@ -24,12 +24,12 @@ DROP TABLE IF EXISTS `jogador_pingpong`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `jogador_pingpong` (
   `id_jogo` int(11) NOT NULL AUTO_INCREMENT,
-  `nome_vencedor` varchar(45) NOT NULL,
-  `score_vencedor` int(11) NOT NULL,
-  `nome_perdedor` varchar(45) NOT NULL,
-  `score_perdedor` int(11) NOT NULL,
+  `nome_jogador1` varchar(45) NOT NULL,
+  `score_jogador1` int(11) NOT NULL,
+  `nome_jogador2` varchar(45) NOT NULL,
+  `score_jogador2` int(11) NOT NULL,
   PRIMARY KEY (`id_jogo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18921 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,6 +38,7 @@ CREATE TABLE `jogador_pingpong` (
 
 LOCK TABLES `jogador_pingpong` WRITE;
 /*!40000 ALTER TABLE `jogador_pingpong` DISABLE KEYS */;
+INSERT INTO `jogador_pingpong` VALUES (18913,'Leo',4,'Pedro',5),(18914,'Leo',4,'PEdro',5),(18915,'Pedro',5,'Faria',2),(18916,'Pedro',1,'Faria2',5),(18917,'Pedor',2,'LEd',5),(18918,'Leo',2,'PEdro',5),(18919,'Leozao',5,'Leozinho',0),(18920,'LeoHenrique',1,'Faria',5);
 /*!40000 ALTER TABLE `jogador_pingpong` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-09-16 21:36:28
+-- Dump completed on 2019-09-19 20:21:09

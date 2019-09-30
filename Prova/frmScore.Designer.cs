@@ -31,27 +31,33 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dgvCar = new System.Windows.Forms.DataGridView();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.dgvPong = new System.Windows.Forms.DataGridView();
             this.nomeJogador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.score = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.dgvPong = new System.Windows.Forms.DataGridView();
             this.player1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pontos1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pontos2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.player2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvFireBoll = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFireBoll)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -83,15 +89,6 @@
             this.label3.Size = new System.Drawing.Size(132, 36);
             this.label3.TabIndex = 2;
             this.label3.Text = "Zelda Ball";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.ForestGreen;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 92);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(283, 346);
-            this.dataGridView1.TabIndex = 3;
             // 
             // dataGridView2
             // 
@@ -144,6 +141,27 @@
             this.dgvCar.Size = new System.Drawing.Size(283, 346);
             this.dgvCar.TabIndex = 5;
             // 
+            // nomeJogador
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            this.nomeJogador.DefaultCellStyle = dataGridViewCellStyle2;
+            this.nomeJogador.Frozen = true;
+            this.nomeJogador.HeaderText = "Nome Jogador";
+            this.nomeJogador.Name = "nomeJogador";
+            this.nomeJogador.ReadOnly = true;
+            this.nomeJogador.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.nomeJogador.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.nomeJogador.Width = 170;
+            // 
+            // score
+            // 
+            this.score.Frozen = true;
+            this.score.HeaderText = "Score";
+            this.score.Name = "score";
+            this.score.ReadOnly = true;
+            this.score.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.score.Width = 120;
+            // 
             // dgvPong
             // 
             this.dgvPong.AllowUserToAddRows = false;
@@ -170,27 +188,6 @@
             this.dgvPong.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPong.Size = new System.Drawing.Size(396, 346);
             this.dgvPong.TabIndex = 6;
-            // 
-            // nomeJogador
-            // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            this.nomeJogador.DefaultCellStyle = dataGridViewCellStyle2;
-            this.nomeJogador.Frozen = true;
-            this.nomeJogador.HeaderText = "Nome Jogador";
-            this.nomeJogador.Name = "nomeJogador";
-            this.nomeJogador.ReadOnly = true;
-            this.nomeJogador.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.nomeJogador.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.nomeJogador.Width = 170;
-            // 
-            // score
-            // 
-            this.score.Frozen = true;
-            this.score.HeaderText = "Score";
-            this.score.Name = "score";
-            this.score.ReadOnly = true;
-            this.score.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.score.Width = 120;
             // 
             // player1
             // 
@@ -224,16 +221,79 @@
             this.player2.Name = "player2";
             this.player2.ReadOnly = true;
             // 
+            // dgvFireBoll
+            // 
+            this.dgvFireBoll.AllowUserToAddRows = false;
+            this.dgvFireBoll.AllowUserToDeleteRows = false;
+            this.dgvFireBoll.AllowUserToResizeColumns = false;
+            this.dgvFireBoll.AllowUserToResizeRows = false;
+            this.dgvFireBoll.BackgroundColor = System.Drawing.Color.ForestGreen;
+            this.dgvFireBoll.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFireBoll.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvFireBoll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvFireBoll.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFireBoll.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvFireBoll.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dgvFireBoll.Location = new System.Drawing.Point(12, 92);
+            this.dgvFireBoll.MultiSelect = false;
+            this.dgvFireBoll.Name = "dgvFireBoll";
+            this.dgvFireBoll.ReadOnly = true;
+            this.dgvFireBoll.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvFireBoll.RowHeadersVisible = false;
+            this.dgvFireBoll.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvFireBoll.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvFireBoll.Size = new System.Drawing.Size(283, 346);
+            this.dgvFireBoll.TabIndex = 7;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nome Jogador";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn1.Width = 170;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.Frozen = true;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Score";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.Width = 120;
+            // 
             // frmScore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(1059, 450);
+            this.Controls.Add(this.dgvFireBoll);
             this.Controls.Add(this.dgvPong);
             this.Controls.Add(this.dgvCar);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -243,10 +303,10 @@
             this.Name = "frmScore";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de pontuação";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFireBoll)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,7 +317,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dgvCar;
         private System.Windows.Forms.ColorDialog colorDialog1;
@@ -268,5 +327,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pontos1;
         private System.Windows.Forms.DataGridViewTextBoxColumn pontos2;
         private System.Windows.Forms.DataGridViewTextBoxColumn player2;
+        private System.Windows.Forms.DataGridView dgvFireBoll;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }

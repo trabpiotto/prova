@@ -37,6 +37,8 @@ namespace Prova
                 carGame.ShowDialog();
             }
             if (menu.recuperaGame() == 1) {
+                TelaInicial zeldaBall = new TelaInicial();
+                zeldaBall.ShowDialog();
 
             }
             this.Close();

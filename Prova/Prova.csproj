@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Prova</RootNamespace>
     <AssemblyName>Prova</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -51,6 +52,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
+    <Compile Include="frmGameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGameOver.Designer.cs">
+      <DependentUpon>frmGameOver.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNickname.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,8 +94,20 @@
     <Compile Include="frmScore.Designer.cs">
       <DependentUpon>frmScore.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImgGame.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaInicial.Designer.cs">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmGameOver.resx">
+      <DependentUpon>frmGameOver.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNickname.resx">
       <DependentUpon>frmNickname.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,7 +134,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TelaInicial.resx">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,6 +151,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_down-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_down-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_left-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_left-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_right-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_right-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_up-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\char_up-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paredeH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paredeV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zelda.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

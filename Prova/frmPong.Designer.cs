@@ -118,6 +118,7 @@ namespace Prova
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PongGame";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.PongForm_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.pongForm_sobeBola);

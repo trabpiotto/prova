@@ -18,6 +18,7 @@ namespace Prova
             InitializeComponent();
             CarregarListaCar();
             CarregarListaPong();
+            CarregarListaFireBoll();
         }
 
         public void CarregarListaCar()
@@ -60,6 +61,28 @@ namespace Prova
                     reader.GetInt32(2),
                     reader.GetInt32(4),
                     reader.GetString(3)                   
+                    );
+            }
+            c.Fechar();
+
+        }
+
+        public void CarregarListaFireBoll()
+        {
+
+            Conexao c = new Conexao();
+            c.Abrir();
+            MySqlCommand cmd = new MySqlCommand("select * from jogador_bolinha order by score_jogador desc");
+
+
+            MySqlDataReader reader = c.Pesquisar(cmd);
+
+            dgvFireBoll.Rows.Clear();
+            while (reader.Read())
+            {
+                dgvFireBoll.Rows.Add(
+                    reader.GetString(1),
+                    reader.GetInt32(2)
                     );
             }
             c.Fechar();

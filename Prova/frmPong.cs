@@ -13,12 +13,17 @@ namespace Prova
 {
     public partial class frmPong : Form
     {
+
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+        System.Media.SoundPlayer gameOverMusic = new System.Media.SoundPlayer();
         private System.Timers.Timer aTimer;
         PongGame g;
 
         public frmPong()
         {
             InitializeComponent();
+            player.SoundLocation = "pingPong.wav";
+            player.Play();
             btnVoltarMenu.Visible = false;
             lblGameOver.Visible = false;
             g = new PongGame((Size)this.ClientSize);
@@ -84,6 +89,9 @@ namespace Prova
         {
             if (fimJogo())
             {
+                player.Stop();
+                gameOverMusic.SoundLocation = "gameOver.wav";
+                gameOverMusic.Play();
                 btnVoltarMenu.Visible = true;
                 lblGameOver.Visible = true;
                 lblPause.Visible = false;

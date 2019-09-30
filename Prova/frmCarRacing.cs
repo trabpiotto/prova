@@ -16,8 +16,10 @@ namespace Prova
         static int vel = 5;
         int gamespeed = vel;
         int scoreCollected = 0;        
-        bool pause = true;     
-        
+        bool pause = true;
+
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+        System.Media.SoundPlayer gameOverMusic = new System.Media.SoundPlayer();
 
 
         public frmCarRacing()
@@ -26,6 +28,10 @@ namespace Prova
             gameOver.Visible = false;
             lblPause.Visible = true;
             btnReiniciar.Visible = false;
+
+            player.SoundLocation = "musicaCar.wav";
+
+            player.Play();
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -185,10 +191,16 @@ namespace Prova
         {
             if (car.Bounds.IntersectsWith(enemy1.Bounds) || car.Bounds.IntersectsWith(enemy2.Bounds) || car.Bounds.IntersectsWith(enemy3.Bounds))
             {
+                player.Stop();
+                gameOverMusic.SoundLocation = "gameOver.wav";
+                gameOverMusic.Play();
                 timer1.Enabled = false;
                 gameOver.Visible = true;
                 btnReiniciar.Visible = true;
                 bancoDados();
+
+                
+
                 return true;
             }        
             return false;
@@ -260,14 +272,19 @@ namespace Prova
             {
                 if(pause == true)
                 {
+
+                   // player.Play();
                     pause = false;
                 }
                 else
                 {
+                  //  player.Stop();
                     pause = true;
                 }
             }
         }
+
+       
 
         private void BtnReiniciar_Click(object sender, EventArgs e)
         {
